@@ -38,4 +38,9 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.cache_classes = true
+  config.eager_load = true
+  config.consider_all_requests_local       = false
+  config.action_controller.perform_caching = true
 end
