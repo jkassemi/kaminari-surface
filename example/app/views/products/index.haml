@@ -1,5 +1,18 @@
-%ul
-  - @products.each do |product|
-    %li= product.name
+.row
+  %h3{style: "margin-bottom:25px;"}
+    Results #{@products.offset_value + 1}-#{@products.offset_value + @products.size} of #{@products.total_count}
 
-= paginate(@products)
+.row
+  %table.table.table-bordered
+    %thead
+      %tr
+        %td
+        %td Name
+
+    %tbody
+      - @products.each_with_index do |product, idx|
+        %tr
+          %td= idx + @products.offset_value + 1
+          %td= product.name
+
+  = paginate(@products, theme: 'twitter-bootstrap-3')

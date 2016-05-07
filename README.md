@@ -1,5 +1,11 @@
 # A Surfacing Pagination Kaminari Extension
 
+Making that last result a little closer.
+
+![screencap](https://raw.githubusercontent.com/jkassemi/kaminari-surface/master/capture.gif)
+
+## Overview
+
 Developers may implement pagination to protect against overzealous result sizes.
 With responsible pagination settings a query that returns a large number of
 results can be displayed with fewer system resources on both the client and

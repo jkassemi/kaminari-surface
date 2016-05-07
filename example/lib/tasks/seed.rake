@@ -3,7 +3,7 @@ task seed: :environment do
 
   Product.delete_all
 
-  100.times do
-    Product.create(name: Faker::Name.name)
+  6.times do
+    Product.create(name: Faker::Commerce.product_name)
   end
 end
