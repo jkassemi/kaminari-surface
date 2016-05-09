@@ -58,7 +58,33 @@ page will now include up to 50 more results:
     results.total_count   # => 100
     results.total_pages   # => 1
 
-## UX Issues
+## Contributing
+
+Fork, address the issue, and submit a pull request. You can reach me through the
+tracker or at jkassemi@gmail.com.
+
+### Running Specs
+
+ActiveRecord and DataMapper specs run with an in-memory schema, and don't need
+any additional setup.
+
+Get a mongo server up and running on your local system (port 27017) so the
+`mongoid` and `mongo_mapper` specs can run. This can be as simple as `$ brew
+install mongodb`.
+
+    $ bundle             # to install the gems from the gemspec
+    $ bundle exec rspec  # to feel the green
+
+## Integration Goals
+
+This release is a proof of concept and designed as a drop-in implementation
+that does not affect the existing kaminari project.
+
+Directly modifying and extending kaminari would be a more maintanable solution.
+Once kinks are worked out here then a PR to the kaminari project makes a heck of
+a lot of sense.
+
+## Caveats
 
 There are some cases where the use of surfacing pagination may not be
 recommended. The following issues may pop up:
