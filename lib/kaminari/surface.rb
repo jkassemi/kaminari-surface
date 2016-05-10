@@ -9,7 +9,3 @@ require 'kaminari/surface/paginatable_array_extension'
 require 'kaminari/models/array_extension'
 
 Kaminari::PaginatableArray.prepend(Kaminari::Surface::PaginatableArrayExtension)
-
-if defined?(DataMapper)
-#  require 'kaminari/surface/data_mapper_extension'
-end
