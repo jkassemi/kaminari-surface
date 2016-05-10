@@ -11,21 +11,22 @@ With responsible pagination settings a query that returns a large number of
 results can be displayed with fewer system resources on both the client and
 the server.
 
-The client may be able to configure the `per` option to permit more results per
-page. Usually this value must be increased from an initially conservative
-value, and after the first result set is displayed.
+For queries that return few results but still trigger pagination, the client
+must either navigate via a pagination component to the last page, or make
+a modification to the `per` option if it's available.
 
-For queries that return few results the client must either make a modification
-to the `per` option manually, or must page to a last page containing few
-results. Both of these operations are unnecessary, and we can enhance the
+Both of these operations are unnecessary, and we can enhance the
 client experience with an application designed to more intelligently handle
 smaller response sets.
 
 Surfacing pagination prevents a second request to the server by sending the
 results that the client would ordinarily need to fetch on a subsequent page
-request if the number of results is under a threshhold. The ideal implementation
+request if the number of results is under a threshold. The ideal implementation
 would prevent the client from flipping through pages when there's little need to
 do so.
+
+tldr; When the result set is sufficiently small, not forcing the client to
+page through results can improve performance.
 
 ## Installation
 
@@ -80,7 +81,7 @@ install mongodb`.
 This release is a proof of concept and designed as a drop-in implementation
 that does not affect the existing kaminari project.
 
-Directly modifying and extending kaminari would be a more maintanable solution.
+Directly modifying and extending kaminari would be a more maintainable solution.
 Once kinks are worked out here then a PR to the kaminari project makes a heck of
 a lot of sense.
 
