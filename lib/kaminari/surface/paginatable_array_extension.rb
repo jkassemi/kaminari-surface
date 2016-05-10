@@ -2,16 +2,16 @@ module Kaminari
   module Surface
     module PaginatableArrayExtension
       def limit(*_args)
-        copy_attrs(super)
+        extend_state_to(super)
       end
 
       def offset(*_args)
-        copy_attrs(super)
+        extend_state_to(super)
       end
 
       private
 
-      def copy_attrs(target)
+      def extend_state_to(target)
         if defined?(@_per_value)
           target.instance_variable_set(:@_per_value, @_per_value)
         end
