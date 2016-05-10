@@ -1,6 +1,6 @@
 # A Surfacing Pagination Kaminari Extension
 
-Making that last result a little closer.
+Bringing that last result a little closer.
 
 ![screencap](https://raw.githubusercontent.com/jkassemi/kaminari-surface/master/capture.gif)
 
@@ -26,7 +26,7 @@ would prevent the client from flipping through pages when there's little need to
 do so.
 
 tldr; When the result set is sufficiently small, not forcing the client to
-page through results can improve performance.
+page through results can improve the experience.
 
 ## Installation
 
