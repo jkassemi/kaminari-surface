@@ -10,6 +10,7 @@
 # Icebox
 
 [ ] `README.md` should include a series of examples
+[ ] Acceptance specs should not be so repeaty
 [ ] Documentation should detail how to enable explicitly and disable globally.
 [ ] I should be able to conceptualize around an ajax pagination feature (prototyping)
 [ ] I should be able to use surfacing pagination with ajax (prototyping)
